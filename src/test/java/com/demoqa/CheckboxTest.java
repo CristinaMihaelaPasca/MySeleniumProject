@@ -18,12 +18,15 @@ public class CheckboxTest {
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().fullscreen();
+        WebElement consentButton = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]"));
+        consentButton.click();
     }
 
     @Test
     public void testCheckbox() {
 //        WebElement checkBoxHome = driver.findElement(By.xpath("//div[@id='tree-node']/ol/li//span[@class='rct-title']"));
 //        checkBoxHome.click();
+
 
         WebElement expendButton = driver.findElement(By.xpath("//*[@id=\"tree-node\"]/div/button[1]"));
         expendButton.click();

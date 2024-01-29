@@ -12,12 +12,17 @@ import org.testng.annotations.Test;
 public class RadiobuttonTest {
     WebDriver driver;
 
+
+
     @BeforeTest
     public void setUp() {
         String url = "https://demoqa.com/radio-button";
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().maximize();
+        WebElement consentButton = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]"));
+        consentButton.click();
+
     }
 
     @Test

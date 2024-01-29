@@ -19,6 +19,8 @@ public class TextboxTest {
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().fullscreen();
+        WebElement consentButton = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]"));
+        consentButton.click();
     }
 
     @Test
@@ -54,11 +56,14 @@ public class TextboxTest {
        Assert.assertTrue(result.getText().contains(expectedResult));
        Assert.assertEquals(expectedResult, result.getText());
 
+
+
     }
 
     @AfterTest
     public void tearDown(){
-        driver.close();
+
+        //driver.close();
     }
 
 
